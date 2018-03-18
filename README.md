@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# rails-manual-crud
+Manual Crud Ruby on Rails
+>>>>>>> cbdf58d0833a7424241b86c45161a9eeb036c407
