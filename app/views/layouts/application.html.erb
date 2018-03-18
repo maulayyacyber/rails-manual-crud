@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://github.com/maulayyacyber/phantom0308/raw/master/coins.png">
+
+    <title><%= @title %> - Administrator</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body style="background-color:#e4e9f3d6;">
+
+  <body>
+    <div class="container" style="margin-top: 50px">
+        <div class="row">
+
+        <% if user_is_logged_in? %>
+
+            <div class="col-md-3">
+                <%= yield :sidebar %>
+            </div>
+
+            <div class="col-md-9">
+                <%= yield %>
+            </div>
+        <% else %>
+        
+            <%= yield %>
+
+        <% end %>    
+
+        </div>
+    </div>
+  </body>
+</html>

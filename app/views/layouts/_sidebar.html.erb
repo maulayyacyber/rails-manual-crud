@@ -1,0 +1,23 @@
+    <div class="list-group" style="box-shadow: none;margin-top: 0px;font-family: 'Roboto';font-weight: 300">
+        <div class="list-group-item white-text" style="font-size:17px;background-color:#59791d;text-align: center;color: white;border-bottom: 5px solid #f0ad4e;"><i class="fa fa-dashboard"></i> DASHBOARD</div>
+        
+        <a href="/apps/dashboard/" class="list-group-item" style="text-transform:uppercase;font-size:17px;color:black;<% if @dashboard == true %> border-left: #58781e 3px solid; <% end %>"><i class="fa fa-home"></i> Dashboard<br></a>
+
+        <a href="/apps/uang/masuk/" class="list-group-item" style="text-transform:uppercase;font-size:17px;color:black;<% if @uang_masuk == true %> border-left: #58781e 3px solid; <% end %>"><i class="fa fa-credit-card"></i> Uang Masuk<br></a>
+
+        <a href="/apps/uang/keluar/" class="list-group-item" style="text-transform:uppercase;font-size:17px;color:black;<% if @uang_keluar == true %> border-left: #58781e 3px solid; <% end %>"><i class="fa fa-credit-card"></i> Uang Keluar<br></a>
+
+        <a href="/apps/laporan/masuk/" class="list-group-item" style="text-transform:uppercase;font-size:17px;color:black;<% if @lap_uang_masuk == true %> border-left: #58781e 3px solid; <% end %>"><i class="fa fa-print"></i> Laporan Uang Masuk<br></a>
+
+        <a href="/apps/laporan/keluar/" class="list-group-item" style="text-transform:uppercase;font-size:17px;color:black;<% if @lap_uang_keluar == true %> border-left: #58781e 3px solid; <% end %>"><i class="fa fa-print"></i> Laporan Uang Keluar<br></a>
+    </div>
+
+    <div class="list-group" style="box-shadow: none;margin-top: 10px;font-family: 'Roboto';font-weight: 300">
+        <div class="list-group-item white-text" style="font-size:17px;background-color:#59791d;text-align: center;color: white;border-bottom: 5px solid #f0ad4e;"><i class="fa fa-cogs"></i> PENGATURAN</div>
+
+        <a href="/apps/users/" class="list-group-item" style="text-transform:uppercase;font-size:17px;color:black;<% if @users == true %> border-left: #58781e 3px solid; <% end %>"><i class="fa fa-users"></i> Users<br></a>
+
+        <!-- <a href="/apps/profil/" class="list-group-item" style="text-transform:uppercase;font-size:17px;color:black;<% if @profil == true %> border-left: #58781e 3px solid; <% end %>"><i class="fa fa-user-circle-o"></i> Profil<br></a> -->
+
+        <a href="/apps/sign-out" class="list-group-item" style="text-transform:uppercase;font-size:17px;color:black"><i class="fa fa-sign-out"></i> Logout<br></a>
+    </div>

@@ -1,0 +1,49 @@
+<section class="pages" style="margin-top: 30px;margin-bottom: 40px">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+				<div class="logo-kaos" style="background-color: #59791d;text-align: center;border-bottom: 5px solid #f0ad4e;border-radius: 5px;padding: 10px">
+					<img src="https://github.com/maulayyacyber/phantom0308/raw/master/coins.png" class="img-responsive" style="width:100px;margin-left: 110px">
+				</div>
+                <div class="card">
+                    <div class="card-content" style="border-radius: 5px;">
+                        <div class="form-login">
+                        	<form action="/sign-in" method="POST">
+                                <div class="form-group">
+                                    <label for="username"><i class="fa fa-user-circle"></i> USERNAME</label>
+                                    <input type="text" class="form-control" name="login[username]" id="username" aria-describedby="username" placeholder="Masukkan Username Anda" required>
+                                    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+                                                                    </div>
+                                <div class="form-group">
+                                    <label for="password"><i class="fa fa-unlock"></i> PASSWORD</label>
+                                    <input type="password" class="form-control" name="login[password]" id="password" placeholder="Masukkan Password Anda" required>
+                                                                    </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    Ingatkan Saya
+                                    </label>
+                                </div>
+                                <div class="form-group">
+									<% flash.each do |key, value| %>
+								        <div class="alert alert-<%= key %>" style="margin-top: 5px"> <%= value %></div>
+								    <% end %>
+                                </div>
+                                <div class="form-group">
+                                     <button type="submit" class="btn btn-success" style="cursor:pointer;width:100%;background-color: #58781e;border-color: #58781e">Masuk <i class="fa fa-sign-in"></i></button>
+                                </div>
+                            </form>                      
+                    </div>
+
+                </div>
+                
+            </div>
+            <p style="text-align: center;">© Hak Cipta Dilindungi 2018 - Aplikasi Keuangan </p>
+            <div class="col-md-4"></div>
+        </div>
+
+    </div>
+</section>

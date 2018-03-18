@@ -1,0 +1,2 @@
+module UangMasukHelper
+end

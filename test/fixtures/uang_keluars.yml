@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jumlah: MyString
+  tanggal: 2018-03-18
+  keterangan: MyText
+
+two:
+  jumlah: MyString
+  tanggal: 2018-03-18
+  keterangan: MyText

@@ -1,0 +1,2 @@
+module LaporanMasukHelper
+end

@@ -1,0 +1,30 @@
+<% content_for(:sidebar) do %>
+    <%= render :partial => "layouts/sidebar" %>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading" style="background-color: #58781e;border-bottom: #f0ad4e 4px solid;font-family: Roboto;font-weight: 300;font-size: 17px;color: white;text-transform: uppercase;"><i class="fa fa-dashboard"></i> <%= @title %></div>
+    <div class="panel-body">
+
+        <div class="col-md-6">
+        	<div class="card card-hover">
+        		<div class="card-content">
+        			<label><i class="fa fa-credit-card"></i> UANG MASUK BULAN INI</label>
+        			<hr>
+        			<label></label>
+        		</div>
+        	</div>
+        </div>
+
+        <div class="col-md-6">
+        	<div class="card card-hover">
+        		<div class="card-content">
+        			<label><i class="fa fa-credit-card"></i> UANG KELUAR BULAN INI</label>
+        			<hr>
+        			<label>0</label>
+        		</div>
+        	</div>
+        </div>
+    
+    </div>
+</div>

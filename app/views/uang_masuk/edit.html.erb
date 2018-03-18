@@ -1,0 +1,33 @@
+<% content_for(:sidebar) do %>
+    <%= render :partial => "layouts/sidebar" %>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading" style="background-color: #58781e;border-bottom: #f0ad4e 4px solid;font-family: Roboto;font-weight: 300;font-size: 17px;color: white;text-transform: uppercase;"><i class="fa fa-credit-card"></i> <%= @title %></div>
+    <div class="panel-body">
+        
+        <form action="/apps/uang/masuk/update/<%= @data_uang_masuk.id %>" method="POST">
+            <div class="form-group">
+                <label for="name"><i class="fa fa-credit-card"></i> JUMLAH UANG MASUK</label>
+                    <input type="number" class="form-control" name="uang_masuk[jumlah]" id="name" aria-describedby="name" value="<%= @data_uang_masuk.jumlah %>" placeholder="Masukkan Jumlah Uang Masuk Anda" required>
+                    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+            </div>
+
+            <div class="form-group">
+                    <label for="username"><i class="fa fa-calendar-o"></i> TANGGAL</label>
+                    <input type="date" class="form-control" name="uang_masuk[tanggal]" id="username" aria-describedby="date" value="<%= @data_uang_masuk.tanggal %>" placeholder="Masukkan Tanggal Uang Masuk Anda" required>
+            </div>
+            <div class="form-group">
+                    <label for="password"><i class="fa fa-file-o"></i> KETERANGAN</label>
+                    <textarea class="form-control" rows="5" name="uang_masuk[keterangan]" placeholder="Masukkan Keterangan Uang Masuk Anda"><%= @data_uang_masuk.keterangan %></textarea>
+            </div>
+            <div class="form-group">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success" style="cursor:pointer;background-color: #58781e;border-color: #58781e"><i class="fa fa-save"></i> Update </button>
+                <a href="/apps/uang/masuk/" class="btn btn-danger btn-md" style="cursor:pointer;background-color: #c38122;border-color: #c38122"><i class="fa fa-long-arrow-left"></i> Batal</a>
+            </div>
+        </form>   
+                 
+    </div>
+</div>
