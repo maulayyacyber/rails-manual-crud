@@ -2,25 +2,25 @@ class RegisterController < ApplicationController
   
   def index
   	@title = 'Users'
-  	if user_is_logged_in?
+  	#if user_is_logged_in?
   		@users       = true
       @data_users  = User.where(["name iLIKE ?","%#{params[:search]}%"]).order(:id).page(params[:page])
-  	else
-  		redirect_to '/'
-  	end
+  	#else
+  		#redirect_to '/'
+  	#end
   end
 
   def add
-    if user_is_logged_in?
+    #if user_is_logged_in?
       @title = 'Tambah User'
       @users       = true
-    else
-      redirect_to '/'
-    end
+    #else
+      #redirect_to '/'
+    #end
   end
 
   def create
-    if user_is_logged_in?
+    #if user_is_logged_in?
       user = User.new(user_params)
       if user.save
       	flash[:success] = 'Data Berhasil Disimpan'
@@ -29,9 +29,9 @@ class RegisterController < ApplicationController
 		    flash[:danger] = 'Data Gagal Disimpan'
 		    redirect_to '/apps/users/'
       end
-    else
-      redirect_to '/'
-    end
+    #else
+      #redirect_to '/'
+    #end
   end
 
   def edit
