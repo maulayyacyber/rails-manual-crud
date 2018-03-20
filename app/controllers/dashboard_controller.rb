@@ -5,7 +5,7 @@ class DashboardController < ApplicationController
   		@title      = 'Dashboard'
       @dashboard  = true
       @data_uang_masuk = UangMasuk.where("tanggal > ? AND tanggal < ?", Time.now.beginning_of_month, Time.now.end_of_month)
-      @data_uang_keluar_bulan_ini = UangKeluar.where("tanggal > ? AND tanggal < ?", Time.now.beginning_of_month, Time.now.end_of_month)
+      @data_uang_keluar = UangKeluar.where("tanggal > ? AND tanggal < ?", Time.now.beginning_of_month, Time.now.end_of_month)
   	else
   		redirect_to '/'
   	end
