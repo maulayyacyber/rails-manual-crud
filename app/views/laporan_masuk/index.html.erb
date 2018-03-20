@@ -53,8 +53,7 @@
                 <% @data_uang_masuk.each do |data| %>
 
                 <% 
-                  @nilai = 0
-                  @jumlah = @nilai + data.jumlah.to_f
+                  
                 %>
 
                   <tr>
@@ -70,9 +69,14 @@
         <div class="text-center">
         
     	</div>
-    	<div class="text-right">
-        	<span style="font-size: 17px;font-weight: 500;"><i class="fa fa-credit-card"></i> TOTAL UANG MASUK : <%= @jumlah %></span> 
-          <b style="font-size: 17px;font-weight: 900;"></b>
-    	</div>
+      <% if @data_uang_masuk.present? %>
+      	<div class="text-right">
+          	<span style="font-size: 17px;font-weight: 500;"><i class="fa fa-credit-card"></i> TOTAL UANG MASUK : 
+            <% c = @data_uang_masuk.map {|m| m.jumlah.to_i} %>
+            <%= number_to_currency(c.inject(0) {|sum,x| sum + x }, unit: "", separator: ",", delimiter: ".") %>
+            </span> 
+            <b style="font-size: 17px;font-weight: 900;"></b>
+      	</div>
+      <% end %>
     </div>
-</div>
+</div> 

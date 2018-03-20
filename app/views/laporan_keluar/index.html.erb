@@ -70,9 +70,14 @@
         <div class="text-center">
         
         </div>
-        <div class="text-right">
-            <span style="font-size: 17px;font-weight: 500;"><i class="fa fa-credit-card"></i> TOTAL UANG KELUAR : <%= @jumlah %></span> 
-          <b style="font-size: 17px;font-weight: 900;"></b>
-        </div>
+        <% if @data_uang_keluar.present? %>
+          <div class="text-right">
+              <span style="font-size: 17px;font-weight: 500;"><i class="fa fa-credit-card"></i> TOTAL UANG KELUAR : 
+              <% c = @data_uang_keluar.map {|m| m.jumlah.to_f} %>
+              <%= number_to_currency(c.inject(0) {|sum,x| sum + x }, unit: "", separator: ",", delimiter: ".") %>
+              </span> 
+              <b style="font-size: 17px;font-weight: 900;"></b>
+          </div>
+        <% end %>
     </div>
 </div>
