@@ -4,7 +4,7 @@ class UangMasukController < ApplicationController
 	  if user_is_logged_in?
   	  @title            = 'Uang Masuk'
       @uang_masuk       = true
-      @data_uang_masuk  = UangMasuk.where(["keterangan iLIKE ?","%#{params[:search]}%"]).order(:id).page(params[:page])
+      @data_uang_masuk  = UangMasuk.where(["keterangan iLIKE ?","%#{params[:search]}%"]).order(id: :desc).page(params[:page])
   	else
   		redirect_to '/'
   	end
