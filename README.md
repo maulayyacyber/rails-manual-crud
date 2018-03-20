@@ -1,14 +1,20 @@
 # Rails Manual CRUD 
     Rails v5.1.1
+
     PostgreSQL
+
     Bootstrap 3.0
 
 # Cara Install
     bundle install
+
     rake db:create
+
     rake db:migrate
 
 # Screenshot
+<img src="https://github.com/favicon.ico" width="48">
+
     Halaman Login
     <img src="https://i.imgur.com/GxGOGo1.png" width="100%">
 
