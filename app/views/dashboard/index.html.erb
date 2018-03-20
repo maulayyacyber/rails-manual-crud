@@ -11,7 +11,16 @@
         		<div class="card-content">
         			<label><i class="fa fa-credit-card"></i> UANG MASUK BULAN INI</label>
         			<hr>
-        			<label></label>
+        			<label style="font-size: 20px">
+                        <% if @data_uang_masuk.present? %>
+
+                            <% c = @data_uang_masuk.map {|m| m.jumlah.to_i} %>
+                            <%= number_to_currency(c.inject(0) {|sum,x| sum + x }, unit: "", separator: ",", delimiter: ".") %>
+
+                        <% else %>  
+                            0
+                        <% end %>       
+                    </label>
         		</div>
         	</div>
         </div>
@@ -21,7 +30,16 @@
         		<div class="card-content">
         			<label><i class="fa fa-credit-card"></i> UANG KELUAR BULAN INI</label>
         			<hr>
-        			<label></label>
+        			<label style="font-size: 20px">
+                        <% if @data_uang_keluar.present? %>
+
+                            <% c = @data_uang_keluar.map {|m| m.jumlah.to_i} %>
+                            <%= number_to_currency(c.inject(0) {|sum,x| sum + x }, unit: "", separator: ",", delimiter: ".") %>
+                            
+                        <% else %>  
+                            0
+                        <% end %>                         
+                    </label>
         		</div>
         	</div>
         </div>
