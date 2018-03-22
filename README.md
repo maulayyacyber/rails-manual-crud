@@ -17,6 +17,8 @@
 
     $ rake db:migrate
 
+    $ rails s
+
 # Screenshot
 
     Halaman Login
