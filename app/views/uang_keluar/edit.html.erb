@@ -6,7 +6,7 @@
   <div class="panel-heading" style="background-color: #58781e;border-bottom: #f0ad4e 4px solid;font-family: Roboto;font-weight: 300;font-size: 17px;color: white;text-transform: uppercase;"><i class="fa fa-credit-card"></i> <%= @title %></div>
     <div class="panel-body">
         
-        <form action="/apps/uang/masuk/update/<%= @data_uang_keluar.id %>" method="POST">
+        <form action="/apps/uang/keluar/update/<%= @data_uang_keluar.id %>" method="POST">
             <div class="form-group">
                 <label for="name"><i class="fa fa-credit-card"></i> JUMLAH UANG KELUAR</label>
                     <input type="number" class="form-control" name="uang_keluar[jumlah]" id="name" aria-describedby="name" value="<%= @data_uang_keluar.jumlah %>" placeholder="Masukkan Jumlah Uang Keluar Anda" required>
