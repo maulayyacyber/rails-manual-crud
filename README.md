@@ -1,16 +1,21 @@
 # Rails Manual CRUD 
-    Rails v5.1.1
+    Rails v5.1.5
 
     PostgreSQL
 
     Bootstrap 3.0
 
 # Cara Install
-    bundle install
 
-    rake db:create
+    $ git clone https://github.com/maulayyacyber/rails-manual-crud.git
 
-    rake db:migrate
+    $ cd rails-manual-crud
+
+    $ bundle install
+
+    $ rake db:create
+
+    $ rake db:migrate
 
 # Screenshot
 
