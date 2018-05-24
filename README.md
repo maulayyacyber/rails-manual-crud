@@ -13,9 +13,9 @@
 
     $ bundle install
 
-    $ rake db:create
+    $ rails db:create
 
-    $ rake db:migrate
+    $ rails db:migrate
 
     $ rails s
 

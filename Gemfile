@@ -37,6 +37,7 @@ gem "font-awesome-rails"
 gem "nprogress-rails"
 # gem 'kaminari'
 gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
+gem "recaptcha", require: "recaptcha/rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

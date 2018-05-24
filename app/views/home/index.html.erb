@@ -27,6 +27,9 @@
                                     Ingatkan Saya
                                     </label>
                                 </div>
+
+                                <%= recaptcha_tags %>
+
                                 <div class="form-group">
 									<% flash.each do |key, value| %>
 								        <div class="alert alert-<%= key %>" style="margin-top: 5px"> <%= value %></div>
